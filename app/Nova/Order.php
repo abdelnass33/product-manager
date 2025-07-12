@@ -9,7 +9,6 @@ use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\Currency;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\BelongsTo;
-use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Order extends Resource
@@ -83,8 +82,6 @@ class Order extends Resource
             Textarea::make('Notes')
                 ->nullable()
                 ->hideFromIndex(),
-
-            HasMany::make('Order Items'),
         ];
     }
 
